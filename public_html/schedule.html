@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule | Beteseb Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            primary: '#00f2ff',
+                            secondary: '#7000ff',
+                            accent: '#ff00d4',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020617; color: #f8fafc; }
+        .text-gradient {
+            background: linear-gradient(to right, #00f2ff, #7000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+        }
+        .nav-link {
+            transition: all 0.3s;
+            color: #94a3b8;
+        }
+        .nav-link:hover {
+            color: #00f2ff;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/5 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center shadow-[0_0_15px_rgba(0,242,255,0.5)]">
+                    <i data-lucide="zap" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="text-2xl font-display font-bold text-gradient">BETESEB ACADEMY</span>
+            </a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="index.html" class="nav-link font-medium">Home</a>
+                <a href="about.html" class="nav-link font-medium">About</a>
+                <a href="features.html" class="nav-link font-medium">Features</a>
+                <a href="schedule.html" class="nav-link font-medium text-brand-primary">Schedule</a>
+                <a href="events.html" class="nav-link font-medium">Events</a>
+                <a href="dashboard.html" class="px-6 py-2 rounded-full bg-brand-primary/10 text-brand-primary border border-brand-primary/20 hover:bg-brand-primary hover:text-white transition-all font-bold">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-12">
+        <div class="text-center space-y-4">
+            <h1 class="text-5xl font-display font-bold">Weekly <span class="text-gradient">Schedule</span></h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto">Your academic roadmap for the current semester.</p>
+        </div>
+
+        <div class="space-y-6">
+            <!-- Monday -->
+            <div class="glass-card p-8 space-y-6">
+                <div class="flex items-center gap-4 border-b border-white/5 pb-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-primary/20 flex items-center justify-center text-brand-primary font-bold">MON</div>
+                    <h2 class="text-2xl font-display font-bold">Monday</h2>
+                </div>
+                <div class="grid gap-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5 hover:border-brand-primary/30 transition-all">
+                        <div class="flex items-center gap-4">
+                            <div class="text-brand-primary font-mono text-sm">08:00 - 09:30</div>
+                            <div>
+                                <h4 class="font-bold text-slate-200">Advanced Mathematics</h4>
+                                <p class="text-xs text-slate-500">Dr. Sarah Johnson • Room 402</p>
+                            </div>
+                        </div>
+                        <span class="mt-2 md:mt-0 px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-[10px] font-bold uppercase tracking-wider w-fit">Lecture</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5 hover:border-brand-secondary/30 transition-all">
+                        <div class="flex items-center gap-4">
+                            <div class="text-brand-secondary font-mono text-sm">10:00 - 11:30</div>
+                            <div>
+                                <h4 class="font-bold text-slate-200">Quantum Physics</h4>
+                                <p class="text-xs text-slate-500">Prof. Michael Chen • Lab 2</p>
+                            </div>
+                        </div>
+                        <span class="mt-2 md:mt-0 px-3 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary text-[10px] font-bold uppercase tracking-wider w-fit">Laboratory</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Tuesday -->
+            <div class="glass-card p-8 space-y-6 opacity-80">
+                <div class="flex items-center gap-4 border-b border-white/5 pb-4">
+                    <div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400 font-bold">TUE</div>
+                    <h2 class="text-2xl font-display font-bold">Tuesday</h2>
+                </div>
+                <div class="grid gap-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5">
+                        <div class="flex items-center gap-4">
+                            <div class="text-slate-500 font-mono text-sm">09:00 - 10:30</div>
+                            <div>
+                                <h4 class="font-bold text-slate-200">Computer Science</h4>
+                                <p class="text-xs text-slate-500">Eng. David Miller • Room 105</p>
+                            </div>
+                        </div>
+                        <span class="mt-2 md:mt-0 px-3 py-1 rounded-full bg-white/5 text-slate-500 text-[10px] font-bold uppercase tracking-wider w-fit">Seminar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 px-6 mt-20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center">
+                    <span class="text-white font-bold text-xs">B</span>
+                </div>
+                <span class="text-xl font-display font-bold text-gradient">BETESEB ACADEMY</span>
+            </div>
+            <div class="flex gap-8 text-slate-500 text-sm font-medium">
+                <a href="#" class="hover:text-brand-primary transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-brand-primary transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-brand-primary transition-colors">Contact Support</a>
+            </div>
+            <p class="text-slate-600 text-xs">
+                © 2026 Beteseb Academy. Empowering the next generation of thinkers.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

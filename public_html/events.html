@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Beteseb Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            primary: '#00f2ff',
+                            secondary: '#7000ff',
+                            accent: '#ff00d4',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020617; color: #f8fafc; }
+        .text-gradient {
+            background: linear-gradient(to right, #00f2ff, #7000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+        }
+        .nav-link {
+            transition: all 0.3s;
+            color: #94a3b8;
+        }
+        .nav-link:hover {
+            color: #00f2ff;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/5 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center shadow-[0_0_15px_rgba(0,242,255,0.5)]">
+                    <i data-lucide="zap" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="text-2xl font-display font-bold text-gradient">BETESEB ACADEMY</span>
+            </a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="index.html" class="nav-link font-medium">Home</a>
+                <a href="about.html" class="nav-link font-medium">About</a>
+                <a href="features.html" class="nav-link font-medium">Features</a>
+                <a href="schedule.html" class="nav-link font-medium">Schedule</a>
+                <a href="events.html" class="nav-link font-medium text-brand-primary">Events</a>
+                <a href="dashboard.html" class="px-6 py-2 rounded-full bg-brand-primary/10 text-brand-primary border border-brand-primary/20 hover:bg-brand-primary hover:text-white transition-all font-bold">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-16">
+        <div class="text-center space-y-4">
+            <h1 class="text-5xl font-display font-bold">Academy <span class="text-gradient">Events</span></h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto">Join us for workshops, summits, and social gatherings at Beteseb Academy.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card overflow-hidden group hover:border-brand-primary/50 transition-all duration-500">
+                <div class="h-48 relative overflow-hidden">
+                    <img src="https://picsum.photos/seed/event1/600/400" alt="Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <div class="absolute top-4 right-4 px-3 py-1 rounded-full backdrop-blur-md border text-[10px] font-bold uppercase tracking-wider text-brand-primary border-brand-primary/30 bg-brand-primary/10">Academic</div>
+                </div>
+                <div class="p-8 space-y-6">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-brand-secondary text-sm font-bold">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            <span>March 25, 2026</span>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-slate-200 group-hover:text-brand-primary transition-colors">AI Innovation Summit</h3>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">A deep dive into the future of artificial intelligence in education.</p>
+                    <button class="w-full py-3 rounded-xl bg-brand-primary/10 text-brand-primary border border-brand-primary/20 hover:bg-brand-primary hover:text-white transition-all font-bold flex items-center justify-center gap-2">
+                        Register Now
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="glass-card overflow-hidden group hover:border-brand-secondary/50 transition-all duration-500">
+                <div class="h-48 relative overflow-hidden">
+                    <img src="https://picsum.photos/seed/event2/600/400" alt="Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <div class="absolute top-4 right-4 px-3 py-1 rounded-full backdrop-blur-md border text-[10px] font-bold uppercase tracking-wider text-brand-secondary border-brand-secondary/30 bg-brand-secondary/10">Social</div>
+                </div>
+                <div class="p-8 space-y-6">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-brand-secondary text-sm font-bold">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            <span>April 12, 2026</span>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-slate-200 group-hover:text-brand-secondary transition-colors">Spring Gala</h3>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Celebrate the season with our annual formal gathering.</p>
+                    <button class="w-full py-3 rounded-xl bg-brand-secondary/10 text-brand-secondary border border-brand-secondary/20 hover:bg-brand-secondary hover:text-white transition-all font-bold flex items-center justify-center gap-2">
+                        Register Now
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 px-6 mt-20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center">
+                    <span class="text-white font-bold text-xs">B</span>
+                </div>
+                <span class="text-xl font-display font-bold text-gradient">BETESEB ACADEMY</span>
+            </div>
+            <div class="flex gap-8 text-slate-500 text-sm font-medium">
+                <a href="#" class="hover:text-brand-primary transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-brand-primary transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-brand-primary transition-colors">Contact Support</a>
+            </div>
+            <p class="text-slate-600 text-xs">
+                © 2026 Beteseb Academy. Empowering the next generation of thinkers.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
